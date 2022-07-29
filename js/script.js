@@ -31,5 +31,20 @@ function getSquareElement() {
     const square = document.createElement('div');
     // aggiungo la classe delle mie celle
     square.classList.add('cell');
+    square.addEventListener('click', clickHandler) // ---> senza () quando è dentro una funzione e non vogliamo che riporti nessun valore 
     return square;
+}
+
+// FUNZIONE PER RIEMPIRE LA CELLA AL CLICK
+
+function clickHandler(){
+    const square = this ;
+    // THIS in questo contesto in cui la funzione è legata 
+    // ad un event Listener, corrisponde al mio elemento agganciato al Listener nel dom (div cell)
+    square.classList.toggle('clicked');
+
+    // ora aggangio la mia funzione alla funzione che genera le mie celle + classe
+    // PRIMA DEL RETURN !!!!!
+
+    console.log(this);
 }
