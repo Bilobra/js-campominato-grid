@@ -9,19 +9,27 @@ let numeroCelle = dimensioneGriglia ** 2;
 // estrapolo il contenitore delle celle
 const celleWrapperElement = document.querySelector('.container');
 
-// creo un CICLO che mi genera progressivamente cella + num
+// estrapolo il bottone play 
+const playButtonElement = document.getElementById('button-play');
+// collego al mio button un event listener che farà apparire la mia griglia 
+playButtonElement.addEventListener('click', function(){
+    // creo un CICLO che mi genera progressivamente cella + num
+    
+    for (let i = 0; i < numeroCelle; i++) {
+    
+        const cella = getSquareElement();
+        cella.innerHTML = i + 1;
+        // appendo il contenuto al mio contenitore di celle
+        celleWrapperElement.append(cella);
+    }
 
-for (let i = 0; i < numeroCelle; i++) {
+})
 
-    const cella = getSquareElement();
-    cella.innerHTML = i + 1;
-    // appendo il contenuto al mio contenitore di celle
-    celleWrapperElement.append(cella);
-}
 // FUNZIONE CHE CREA LE MIE CELLE + classe
 function getSquareElement() {
     // creo un elemento div
     const square = document.createElement('div');
     // aggiungo la classe delle mie celle
     square.classList.add('cell');
+    return square;
 }

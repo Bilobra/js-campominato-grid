@@ -40,7 +40,7 @@ footer i {
 }
 
 /* grid */
-.container-grid{
+.container{
     flex-basis: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -52,12 +52,13 @@ footer i {
 
 .cell{
     aspect-ratio: 1/1;
-    border: 2pxsolid black;
+    border: 1px solid rgba(17, 17, 17, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    
 }
 
 .cell.clicked{
