@@ -38,3 +38,28 @@ footer{
 footer i {
     font-size: 15px;
 }
+
+/* grid */
+.container-grid{
+    flex-basis: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    aspect-ratio: 1/1;
+    background-color:rgba(17, 17, 17, 0.1);
+    grid-template-columns: repeat(10,1fr);
+}
+
+.cell{
+    aspect-ratio: 1/1;
+    border: 2pxsolid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 2rem;
+}
+
+.cell.clicked{
+    background-color: rgb(101, 249, 212);
+}
