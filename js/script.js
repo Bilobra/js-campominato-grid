@@ -46,5 +46,9 @@ function clickHandler(){
     // ora aggangio la mia funzione alla funzione che genera le mie celle + classe
     // PRIMA DEL RETURN !!!!!
 
+    square.removeEventListener('click',clickHandler);
+    // per togliere l'evento dopo aver cliccato una sola volta 
+    // quindi non si toglie la classe clicked
+
     console.log(this);
 }
