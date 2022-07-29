@@ -21,7 +21,7 @@
 //     // creo un CICLO che mi genera progressivamente cella + num
     
 //     for (let i = 0; i < numeroCelle; i++) {
-    
+     
 //         const cella = getSquareElement();
 //         cella.innerHTML = i + 1;
 //         // appendo il contenuto al mio contenitore di celle
